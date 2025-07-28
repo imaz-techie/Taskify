@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.btn-primary {
+  @apply bg-[#d4a373] hover:bg-orange-400 text-white px-6 py-3 rounded-xl font-medium flex items-center space-x-2 transition-colors duration-200;
+}
+
+.logs-header-container {
+  @apply inline-flex items-center border-2 h-8 px-3 py-4 rounded-md;
+}
+
+.sidemenu-link {
+  @apply flex flex-row items-center justify-between px-6 p-3 mx-6 font-light hover:bg-orange-200 font-poppins text-sm rounded-lg;
+}
+
+.main-width {
+  width: calc(100% - 240px);
+}
+.side-menu {
+  width: 240px;
+  background: linear-gradient(180deg, #eeb58f 0%, #d4a373 100%);
+}
