@@ -195,22 +195,22 @@ const Dashboard = () => {
         </div>
 
         {/* Recent Projects */}
-
-        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="text-lg font-semibold text-gray-900">
-              Recent Projects
-            </h3>
-            <button className="text-orange-600 hover:text-orange-700 font-medium text-sm transition-colors duration-200">
-              View All Projects
-            </button>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {recentProjects.map((project, index) => (
-              <RecentProjectCard key={index} project={project} />
-            ))}
-          </div>
-        </div>
+        {/* 
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-lg font-semibold text-gray-900">
+                Recent Projects
+              </h3>
+              <button className="text-orange-600 hover:text-orange-700 font-medium text-sm transition-colors duration-200">
+                View All Projects
+              </button>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {recentProjects.map((project, index) => (
+                <RecentProjectCard key={index} project={project} />
+              ))}
+            </div>
+          </div> */}
 
         {/* Quick Actions */}
 

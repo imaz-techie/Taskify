@@ -6,9 +6,8 @@ import {
   Plus,
   Search,
 } from "lucide-react";
-import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { sampleProjects } from "../../../Utils/constants";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ProjectCard from "./ProjectCard";
 
 const ProjectsApp = ({ projects, setProjects }) => {
@@ -41,7 +40,7 @@ const ProjectsApp = ({ projects, setProjects }) => {
               </div>
               <button
                 onClick={() => navigate("/projects/create")}
-                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-medium flex items-center space-x-2 transition-colors duration-200"
+                className="bg-[#d4a373] hover:bg-orange-300 text-white px-6 py-3 rounded-xl font-medium flex items-center space-x-2 transition-colors duration-200"
               >
                 <Plus className="w-5 h-5" />
                 <span>Create Project</span>
@@ -112,7 +111,7 @@ const ProjectsApp = ({ projects, setProjects }) => {
                   <option value="active">Active</option>
                   <option value="completed">Completed</option>
                   <option value="on-hold">On Hold</option>
-                  <option value="cancelled">Cancelled</option>
+                  {/* <option value="cancelled">Cancelled</option> */}
                 </select>
               </div>
             </div>

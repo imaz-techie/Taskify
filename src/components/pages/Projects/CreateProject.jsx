@@ -183,7 +183,7 @@ const CreateProject = ({ projects, setProjects }) => {
                     <option value="active">Active</option>
                     <option value="on-hold">On Hold</option>
                     <option value="completed">Completed</option>
-                    <option value="cancelled">Cancelled</option>
+                    {/* <option value="cancelled">Cancelled</option> */}
                   </select>
                 </div>
                 <div>
@@ -256,7 +256,7 @@ const CreateProject = ({ projects, setProjects }) => {
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition-colors font-medium"
+                className="px-6 py-3 bg-[#d4a373] hover:bg-orange-300 text-white rounded-xl transition-colors font-medium"
               >
                 Create Project
               </button>

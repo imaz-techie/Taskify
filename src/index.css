@@ -11,7 +11,7 @@ html {
 }
 
 .btn-primary {
-  @apply bg-[#d4a373] hover:bg-orange-400 text-white px-6 py-3 rounded-xl font-medium flex items-center space-x-2 transition-colors duration-200;
+  @apply bg-[#d4a373] hover:bg-orange-300 text-white px-6 py-3 rounded-xl font-medium flex items-center space-x-2 transition-colors duration-200;
 }
 
 .logs-header-container {
@@ -27,5 +27,5 @@ html {
 }
 .side-menu {
   width: 240px;
-  background: linear-gradient(180deg, #eeb58f 0%, #d4a373 100%);
+  background: linear-gradient(180deg, #eeb58f 0%, #ad947a 100%);
 }

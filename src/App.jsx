@@ -15,7 +15,7 @@ function App() {
 
   // Initialize with sample data
   useEffect(() => {
-    if (storedprojects) {
+    if (storedprojects && storedprojects.length > 0) {
       setProjects([...storedprojects]);
     } else {
       setProjects([...sampleProjects]);

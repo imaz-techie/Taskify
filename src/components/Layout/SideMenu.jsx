@@ -11,7 +11,7 @@ import settingsIcon from "../../assets/icons/settings.svg";
 function SideMenu() {
   const [show, setShow] = useState(false);
   return (
-    <section className="sticky top-0 h-screen w-64 bg-white shadow-md overflow-y-auto side-menu select-none">
+    <section className="sticky top-0 h-screen w-64 bg-white shadow-md overflow-y-auto side-menu select-none shadow-2xl">
       <div className="pt-3 pl-9 text-2xl text-black">Task Manager</div>
       <ul className="flex flex-col mx-auto text-black text-2xl mt-3 gap-1">
         <li>
@@ -22,7 +22,7 @@ function SideMenu() {
             }
           >
             <div className="flex flex-row gap-3">
-              <img src={homeIcon} className="h-4 w-4" alt="home-icon" />
+              <img src={homeIcon} className="h-6 w-6" alt="home-icon" />
               Dashboard
             </div>
           </NavLink>

@@ -15,12 +15,12 @@ function NavBar() {
             />
           </div>
         </div>
-        <div className="w-1/2 flex flex-row space-x-6 items-center justify-end">
+        <div className="w-1/2 flex flex-row space-x-3 items-center justify-end">
           <div className="w-10 h-10 rounded-full bg-slate-600">
             <img src={Avatar} alt="avatar" className="" />
           </div>
-          <div>
-            <h4 className="font-poppins text-md font-bold">Imaz</h4>
+          <div className="flex flex-col gap-0">
+            <h4 className="font-poppins text-lg font-bold">Imaz</h4>
             <span className="font-poppins text-xs font-light">Admin</span>
           </div>
         </div>
