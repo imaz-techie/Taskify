@@ -22,11 +22,11 @@ function Login() {
   //     setPassworderror(null);
   //   }
   //   if (emailerror === null && passworderror === null) {
-  //     localStorage.setItem("login", "true");
+  //     sessionStorage.setItem("login", "true");
   //     navigate("/dashboard");
   //   }
 
-  //   localStorage.setItem("login", "true");
+  //   sessionStorage.setItem("login", "true");
   //   navigate("/");
   // }
   function HandleSubmit() {
@@ -50,20 +50,19 @@ function Login() {
     setPassworderror(passwordErr);
 
     if (isValid) {
-      localStorage.setItem("login", "true");
+      sessionStorage.setItem("login", "true");
       navigate("/");
     }
   }
 
   return (
     <main className="flex h-screen w-screen">
-      <div className=" ">
-        {/* <img src="public/asset/login.png" alt="" className="h-screen w-full" /> */}
+      <div>
         <img className="h-screen w-full" src={login} alt="" />
       </div>
 
       <div className="w-1/2 flex flex-col justify-center items-center p-3">
-        <div className="flex flex-col items-center gap-3">
+        <div className="flex flex-col items-center gap-3 bg-orange-100 p-10 border-[1px] border-[#d6b694] rounded-[25px]">
           <h1 className="text-[#eeb58f] text-4xl mt-4">WELCOME</h1>
           <p>Welcome ! Please enter your details.</p>
 
@@ -108,7 +107,6 @@ function Login() {
           </button>
         </div>
       </div>
-      {/* <img className="w-1/2" src={login} alt="" /> */}
     </main>
   );
 }

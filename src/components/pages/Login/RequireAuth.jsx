@@ -2,7 +2,7 @@
 import { Navigate } from "react-router-dom";
 
 const RequireAuth = ({ children }) => {
-  const isLoggedIn = localStorage.getItem("login") === "true";
+  const isLoggedIn = sessionStorage.getItem("login") === "true";
   return isLoggedIn ? children : <Navigate to="/login" replace />;
 };
 

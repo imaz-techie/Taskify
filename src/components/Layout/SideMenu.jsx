@@ -13,7 +13,7 @@ function SideMenu() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("login"); // or: localStorage.setItem("login", "false");
+    sessionStorage.removeItem("login"); // or: sessionStorage.setItem("login", "false");
     navigate("/login");
   };
   return (
