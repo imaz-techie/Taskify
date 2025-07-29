@@ -67,7 +67,6 @@ const CreateProject = ({ projects, setProjects }) => {
 
     setProjects((prev) => [...prev, newProject]);
 
-    // In a real app, you would save to sessionStorage here:
     localStorage.setItem("projects", JSON.stringify([...projects, newProject]));
 
     navigate("/projects");

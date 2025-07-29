@@ -42,11 +42,11 @@ const ProjectCard = ({ project }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         const storedProjects =
-          JSON.parse(sessionStorage.getItem("projects")) || [];
+          JSON.parse(localStorage.getItem("projects")) || [];
         const updatedProjects = storedProjects.filter(
           (item) => item.id !== project.id
         );
-        sessionStorage.setItem("projects", JSON.stringify(updatedProjects));
+        localStorage.setItem("projects", JSON.stringify(updatedProjects));
 
         Swal.fire({
           title: "Deleted!",

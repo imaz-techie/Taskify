@@ -9,26 +9,6 @@ function Login() {
   const [passworderror, setPassworderror] = useState(null);
   let navigate = useNavigate();
 
-  // function HandleSubmit() {
-  //   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-  //   if (!emailRegex.test(email)) {
-  //     setEmailerror("Invalid Email");
-  //   } else {
-  //     setEmailerror(null);
-  //   }
-  //   if (password.length < 6) {
-  //     setPassworderror("Password must contain Above 6 Characters");
-  //   } else {
-  //     setPassworderror(null);
-  //   }
-  //   if (emailerror === null && passworderror === null) {
-  //     sessionStorage.setItem("login", "true");
-  //     navigate("/dashboard");
-  //   }
-
-  //   sessionStorage.setItem("login", "true");
-  //   navigate("/");
-  // }
   function HandleSubmit() {
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
@@ -63,7 +43,7 @@ function Login() {
 
       <div className="w-1/2 flex flex-col justify-center items-center p-3">
         <div className="flex flex-col items-center gap-3 bg-orange-100 p-10 border-[1px] border-[#d6b694] rounded-[25px]">
-          <h1 className="text-[#eeb58f] text-4xl mt-4">WELCOME</h1>
+          <h1 className="text-[#ac8a72] text-4xl mt-4">WELCOME</h1>
           <p>Welcome ! Please enter your details.</p>
 
           <div className="flex flex-col gap-3 items-start w-full">

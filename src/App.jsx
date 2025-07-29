@@ -28,7 +28,7 @@ function App() {
       {/* <Route
         path="*"
         element={
-          sessionStorage.getItem("login") === "true" ? (
+          localStorage.getItem("login") === "true" ? (
             <Navigate to="/" />
           ) : (
             <Navigate to="/login" />
