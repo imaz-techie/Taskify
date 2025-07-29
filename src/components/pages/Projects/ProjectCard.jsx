@@ -30,14 +30,6 @@ const ProjectCard = ({ project }) => {
     }
   };
 
-  // const handleDelete = () => {
-  //   const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
-  //   const updatedProjects = storedProjects.filter(
-  //     (item) => item.id !== project.id
-  //   );
-  //   localStorage.setItem("projects", JSON.stringify(updatedProjects));
-  //   window.location.reload(); // quick way to reflect change — or trigger a re-render from parent
-  // };
   const handleDelete = () => {
     Swal.fire({
       title: "Are you sure?",
@@ -61,7 +53,6 @@ const ProjectCard = ({ project }) => {
           text: "Your project has been deleted.",
           icon: "success",
         }).then(() => {
-          // Optionally refresh the page or trigger re-render
           window.location.reload();
         });
       }
@@ -105,7 +96,6 @@ const ProjectCard = ({ project }) => {
       <div className="space-y-3">
         <div className="flex items-center justify-between text-sm">
           <span className="text-gray-600">Progress</span>
-          {/* <span className="font-medium text-gray-900">{project.progress}%</span> */}
           <span className="font-medium text-gray-900">
             {project.status === "completed" ? "100%" : `${project.progress}%`}
           </span>
@@ -113,7 +103,6 @@ const ProjectCard = ({ project }) => {
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
             className="bg-orange-300 h-2 rounded-full transition-all duration-500"
-            // style={{ width: `${project.progress}%` }}
             style={{
               width: `${
                 project.status === "completed" ? 100 : project.progress

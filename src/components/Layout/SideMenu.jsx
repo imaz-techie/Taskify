@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import automationIcon from "../../assets/icons/Automation.svg";
 import manageIcon from "../../assets/icons/Group.svg";
 import homeIcon from "../../assets/icons/Home.svg";
@@ -10,6 +10,12 @@ import settingsIcon from "../../assets/icons/settings.svg";
 
 function SideMenu() {
   const [show, setShow] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("login"); // or: localStorage.setItem("login", "false");
+    navigate("/login");
+  };
   return (
     <section className="sticky top-0 h-screen w-64 bg-white shadow-md overflow-y-auto side-menu select-none shadow-2xl">
       <div className="pt-3 pl-9 text-2xl text-black">Task Manager</div>
@@ -87,8 +93,14 @@ function SideMenu() {
           </div>
         </li>
         <li>
-          <div className="sidemenu-link">
+          {/* <div className="sidemenu-link">
             <div className="flex flex-row gap-3">
+              <img src={logoutIcon} className="h-5 w-4" alt="logout-icon" />
+              Logout
+            </div>
+          </div> */}
+          <div className="sidemenu-link" onClick={handleLogout} role="button">
+            <div className="flex flex-row gap-3 cursor-pointer">
               <img src={logoutIcon} className="h-5 w-4" alt="logout-icon" />
               Logout
             </div>

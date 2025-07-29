@@ -1,11 +1,4 @@
-import {
-  AlertCircle,
-  CheckCircle,
-  Clock,
-  FolderOpen,
-  Plus,
-  Users,
-} from "lucide-react";
+import { CheckCircle, Clock, FolderOpen, Plus } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -24,11 +17,9 @@ import {
 } from "recharts";
 import {
   monthlyProgressData,
-  recentProjects,
   taskProgressData,
 } from "../../../Utils/constants";
 import StatCard from "../../Common/StatCard";
-import RecentProjectCard from "./RecentProjectCard";
 
 const Dashboard = () => {
   const [dashboardData] = useState({
@@ -193,70 +184,6 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-
-        {/* Recent Projects */}
-        {/* 
-          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-lg font-semibold text-gray-900">
-                Recent Projects
-              </h3>
-              <button className="text-orange-600 hover:text-orange-700 font-medium text-sm transition-colors duration-200">
-                View All Projects
-              </button>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {recentProjects.map((project, index) => (
-                <RecentProjectCard key={index} project={project} />
-              ))}
-            </div>
-          </div> */}
-
-        {/* Quick Actions */}
-
-        {/* <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white">
-            <div className="flex items-center justify-between">
-              <div>
-                <h4 className="text-lg font-semibold mb-2">
-                  Create New Project
-                </h4>
-                <p className="text-orange-100 text-sm">
-                  Start organizing your next big idea
-                </p>
-              </div>
-              <Plus className="w-8 h-8 text-orange-200" />
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-            <div className="flex items-center justify-between">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  Task Overview
-                </h4>
-                <p className="text-gray-600 text-sm">
-                  Review pending and overdue tasks
-                </p>
-              </div>
-              <AlertCircle className="w-8 h-8 text-orange-500" />
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-            <div className="flex items-center justify-between">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  Team Activity
-                </h4>
-                <p className="text-gray-600 text-sm">
-                  See what your team is working on
-                </p>
-              </div>
-              <Users className="w-8 h-8 text-orange-500" />
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );
